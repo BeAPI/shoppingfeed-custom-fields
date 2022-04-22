@@ -1,0 +1,77 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ShoppingFeed Custom Fields\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/shoppingfeed-"
+"custom-fields\n"
+"POT-Creation-Date: 2022-04-22T20:17:55+00:00\n"
+"PO-Revision-Date: 2022-04-22 22:23+0200\n"
+"Last-Translator: \n"
+"Language-Team: Be API\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ../src\n"
+"X-Poedit-KeywordsList: esc_html_e;esc;__;esc_attr_e;esc_html\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#. Plugin Name of the plugin
+#: src/Admin/Options.php:37 src/Admin/Options.php:38
+msgid "ShoppingFeed Custom Fields"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/shoppingfeed/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Map custom fields for ShoppingFeed plugin"
+msgstr ""
+
+#. Author of the plugin
+msgid "Shopping-Feed"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.shopping-feed.com/"
+msgstr ""
+
+#: src/Admin/Options.php:75
+msgid "ACF fields"
+msgstr "Champs ACF"
+
+#: src/Admin/Options.php:85
+msgid "Custom fields"
+msgstr "Champ personnalisés"
+
+#: src/Admin/Options.php:102
+msgid "Custom fields to export to ShoppingFeed. Default : all"
+msgstr ""
+"Champs personnalisés à inclure dans le flux ShoppingFeed. Par défaut : "
+"tous"
+
+#: src/Admin/Options.php:118
+msgid "Save changes"
+msgstr "Enregistrer"
+
+#: src/Admin/Options.php:151
+msgid "Selected ACF Fields"
+msgstr "Champs ACF sélectionnés"
+
+#: src/Admin/Options.php:152
+msgid "Unselected ACF Fields"
+msgstr "Champs ACF non sélectionnés"
+
+#: src/Admin/Options.php:153
+msgid "Search"
+msgstr "Rechercher"
+
+#: src/ShoppingFeedCustomFields.php:38
+msgid "ShoppingFeed and ACF plugins must be activated"
+msgstr "Les plugins ShoppingFeed et ACF doivent être activés"
+
+#: src/ShoppingFeedCustomFields.php:84
+msgid "Settings"
+msgstr "Réglages"
