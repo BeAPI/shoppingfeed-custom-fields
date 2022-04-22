@@ -115,7 +115,7 @@ class Options {
 				<?php
 				settings_fields( 'sfcf_settings_page_fields' );
 				do_settings_sections( self::SFCF_SETTINGS_PAGE );
-				submit_button( __( 'Save changes', 'shopping-feed-custom-fields' ), 'submit' );
+				submit_button( __( 'Save changes', 'shopping-feed-custom-fields' ) );
 				?>
 			</form>
 		</div>
