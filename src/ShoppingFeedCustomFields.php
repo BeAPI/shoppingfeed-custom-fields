@@ -56,11 +56,7 @@ class ShoppingFeedCustomFields {
 	 * @return bool
 	 */
 	public function check_compatibility() {
-		if ( ! function_exists( 'is_plugin_active' ) ) {
-			include_once ABSPATH . 'wp-admin/includes/plugin.php';
-		}
-
-		return is_plugin_active( 'shopping-feed/shoppingfeed.php' ) && is_plugin_active( 'advanced-custom-fields/acf.php' );
+		return defined( 'SF_VERSION' ) && defined( 'ACF_VERSION' );
 	}
 
 	/**
