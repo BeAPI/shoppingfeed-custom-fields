@@ -86,7 +86,7 @@ class Options {
 			function () use ( $acf_product_fields ) {
 				?>
 				<select class="acf" multiple
-						name='<?php echo esc_html( sprintf( '%s[acf][]', self::SFA_OPTIONS ) ); ?>'>
+						name='<?php echo esc_attr( sprintf( '%s[acf][]', self::SFA_OPTIONS ) ); ?>'>
 					<?php
 					foreach ( $acf_product_fields as $acf_product_field ) {
 						?>
@@ -99,7 +99,7 @@ class Options {
 					?>
 				</select>
 				<p class="description" id="tagline-description">
-					<?php esc_attr_e( 'Custom fields to export to ShoppingFeed. Default : all', 'shopping-feed-custom-fields' ); ?>
+					<?php esc_html_e( 'Custom fields to export to ShoppingFeed. Default : all', 'shopping-feed-custom-fields' ); ?>
 				</p>
 				<?php
 			},
