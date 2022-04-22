@@ -7,7 +7,7 @@
  * Author URI:      https://www.shopping-feed.com/
  * Text Domain:     shopping-feed-custom-fields
  * Domain Path:     /languages
- * Version:         1.0.0
+ * Version:         1.0.1
  * License:         GPLv3 or later
  * License URI:     https://www.gnu.org/licenses/gpl-3.0.html
  */
@@ -22,7 +22,7 @@ if ( file_exists( plugin_dir_path( __FILE__ ) . '/vendor/autoload.php' ) ) {
 	require_once plugin_dir_path( __FILE__ ) . '/vendor/autoload.php';
 }
 
-define( 'SFCF_PLUGIN_VERSION', '1.0.0' );
+define( 'SFCF_PLUGIN_VERSION', '1.0.1' );
 define( 'SFCF_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SFCF_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'SFCF_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
