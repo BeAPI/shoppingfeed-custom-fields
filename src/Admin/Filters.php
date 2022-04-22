@@ -35,26 +35,29 @@ class Filters {
 	 * @return array
 	 */
 	public function get_acf_fields( $acf_fields, $wc_product ) {
-		return array_map( function ( $acf_field ) use ( $wc_product ) {
-			$field          = array();
-			$field['name']  = sprintf( '%s_%s', 'acf', $acf_field['name'] );
-			$field['value'] = get_field( $acf_field['key'], $wc_product->get_id() );
-			switch ( $acf_field['type'] ) {
-				case 'select':
-				case 'checkbox':
-					$field['value'] = is_array( $field['value'] ) ? implode( ',', $field['value'] ) : '';
-					break;
-				case 'true_false':
-					$field['value'] = (string) $field['value'];
-					break;
-				case 'link':
-					$field['value'] = ! empty( $field['value']['url'] ) ? $field['value']['url'] : '';
-					break;
-				default:
-					break;
-			}
+		return array_map(
+			function ( $acf_field ) use ( $wc_product ) {
+				$field          = [];
+				$field['name']  = sprintf( '%s_%s', 'acf', $acf_field['name'] );
+				$field['value'] = get_field( $acf_field['key'], $wc_product->get_id() );
+				switch ( $acf_field['type'] ) {
+					case 'select':
+					case 'checkbox':
+						$field['value'] = is_array( $field['value'] ) ? implode( ',', $field['value'] ) : '';
+						break;
+					case 'true_false':
+						$field['value'] = (string) $field['value'];
+						break;
+					case 'link':
+						$field['value'] = ! empty( $field['value']['url'] ) ? $field['value']['url'] : '';
+						break;
+					default:
+						break;
+				}
 
-			return $field;
-		}, $acf_fields );
+				return $field;
+			},
+			$acf_fields
+		);
 	}
 }

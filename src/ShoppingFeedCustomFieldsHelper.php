@@ -1,14 +1,12 @@
 <?php
 
-
 namespace ShoppingFeed\ShoppingFeedWCCustomFields;
-
 
 use ShoppingFeed\ShoppingFeedWCCustomFields\Admin\Options;
 
 class ShoppingFeedCustomFieldsHelper {
 
-	const ALLOWED_ACF_FIELD_TYPES = array(
+	const ALLOWED_ACF_FIELD_TYPES = [
 		'text',
 		'textarea',
 		'number',
@@ -19,8 +17,8 @@ class ShoppingFeedCustomFieldsHelper {
 		'checkbox',
 		'radio',
 		'true_false',
-		'link'
-	);
+		'link',
+	];
 
 	/**
 	 * Return the settings link for plugin
@@ -33,12 +31,15 @@ class ShoppingFeedCustomFieldsHelper {
 	public static function get_acf_options() {
 		$options = get_option( Options::SFA_OPTIONS );
 		if ( empty( $options['acf'] ) ) {
-			return array();
+			return [];
 		}
 
-		return array_map( function ( $field ) {
-			return json_decode( $field, true );
-		}, $options['acf'] );
+		return array_map(
+			function ( $field ) {
+				return json_decode( $field, true );
+			},
+			$options['acf']
+		);
 	}
 
 	public static function acf_is_selected( $key, $options ) {
@@ -51,8 +52,8 @@ class ShoppingFeedCustomFieldsHelper {
 	 * @return array
 	 */
 	public static function get_acf_product_fields() {
-		$product_groups = acf_get_field_groups( array( 'post_type' => 'product' ) );
-		$fields         = array();
+		$product_groups = acf_get_field_groups( [ 'post_type' => 'product' ] );
+		$fields         = [];
 		if ( empty( $product_groups ) ) {
 			return $fields;
 		}
@@ -70,7 +71,7 @@ class ShoppingFeedCustomFieldsHelper {
 					'type'  => $field['type'],
 					'name'  => $field['name'],
 					'key'   => $field['key'],
-					'label' => $field['label']
+					'label' => $field['label'],
 				];
 			}
 		}

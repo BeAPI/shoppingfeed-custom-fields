@@ -2,9 +2,9 @@
 
 namespace ShoppingFeed\ShoppingFeedWCCustomFields\Admin;
 
-// Exit on direct access
 use ShoppingFeed\ShoppingFeedWCCustomFields\ShoppingFeedCustomFieldsHelper;
 
+// Exit on direct access
 defined( 'ABSPATH' ) || exit;
 
 class Options {
@@ -38,7 +38,7 @@ class Options {
 					__( 'ShoppingFeed Custom Fields', 'shopping-feed-custom-fields' ),
 					'manage_options',
 					self::MENU_SLUG,
-					array( $this, 'load_setting_page' )
+					[ $this, 'load_setting_page' ]
 				);
 			}
 		);
@@ -72,9 +72,8 @@ class Options {
 		//Products
 		add_settings_section(
 			'sfcf_settings',
-			__( 'Champs ACF', 'shopping-feed-custom-fields' ),
-			function () {
-			},
+			__( 'ACF fields', 'shopping-feed-custom-fields' ),
+			function () {},
 			self::SFCF_SETTINGS_PAGE
 		);
 
@@ -83,25 +82,25 @@ class Options {
 		//PRODUCT FIELDS
 		add_settings_field(
 			'acf',
-			__( 'Champs personnalisés', 'shopping-feed-custom-fields' ),
+			__( 'Custom fields', 'shopping-feed-custom-fields' ),
 			function () use ( $acf_product_fields ) {
 				?>
-                <select class="acf" multiple
-                        name='<?php echo esc_html( sprintf( '%s[acf][]', self::SFA_OPTIONS ) ); ?>'>
+				<select class="acf" multiple
+						name='<?php echo esc_html( sprintf( '%s[acf][]', self::SFA_OPTIONS ) ); ?>'>
 					<?php
 					foreach ( $acf_product_fields as $acf_product_field ) {
 						?>
-                        <option value="<?php echo wc_esc_json( wp_json_encode( $acf_product_field ) ); ?>"
+						<option value="<?php echo wc_esc_json( wp_json_encode( $acf_product_field ) ); ?>"
 							<?php selected( ShoppingFeedCustomFieldsHelper::acf_is_selected( $acf_product_field['key'], $this->sfcf_acf_options ), 1 ); ?>
-                        >
+						>
 							<?php echo esc_html( $acf_product_field['label'] ); ?></option>
 						<?php
 					}
 					?>
-                </select>
-                <p class="description" id="tagline-description">
-					<?php esc_attr_e( 'Custom fields to export to Shoppingfeed. Default : all', 'shopping-feed-custom-fields' ); ?>
-                </p>
+				</select>
+				<p class="description" id="tagline-description">
+					<?php esc_attr_e( 'Custom fields to export to ShoppingFeed. Default : all', 'shopping-feed-custom-fields' ); ?>
+				</p>
 				<?php
 			},
 			self::SFCF_SETTINGS_PAGE,
@@ -109,17 +108,17 @@ class Options {
 		);
 
 		?>
-        <div class="wrap">
+		<div class="wrap">
 			<?php settings_errors(); ?>
 
-            <form method="post" action="options.php">
+			<form method="post" action="options.php">
 				<?php
 				settings_fields( 'sfcf_settings_page_fields' );
 				do_settings_sections( self::SFCF_SETTINGS_PAGE );
 				submit_button( __( 'Save changes', 'shopping-feed-custom-fields' ), 'submit' );
 				?>
-            </form>
-        </div>
+			</form>
+		</div>
 		<?php
 	}
 
@@ -127,27 +126,32 @@ class Options {
 		wp_enqueue_style(
 			'sfcf_app',
 			SFCF_PLUGIN_URL . 'assets/css/app.css',
-			array(),
-			time()
+			[],
+			SFCF_PLUGIN_VERSION
 		);
 
 		wp_enqueue_script(
 			'sfcf_multi_js',
 			SFCF_PLUGIN_URL . 'assets/js/multi.min.js',
-			array( 'jquery' ),
-			false,
+			[ 'jquery' ],
+			SFCF_PLUGIN_VERSION,
 			true
 		);
 
-		wp_enqueue_script( 'sfcf_multi_js_init', SFCF_PLUGIN_URL . 'assets/js/init.js', array( 'sfcf_multi_js' ), time() );
+		wp_enqueue_script(
+			'sfcf_multi_js_init',
+			SFCF_PLUGIN_URL . 'assets/js/init.js',
+			[ 'sfcf_multi_js' ],
+			SFCF_PLUGIN_VERSION
+		);
 		wp_localize_script(
 			'sfcf_multi_js_init',
 			'sf_options',
-			array(
+			[
 				'selected'   => __( 'Selected ACF Fields', 'shopping-feed-custom-fields' ),
 				'unselected' => __( 'Unselected ACF Fields', 'shopping-feed-custom-fields' ),
 				'search'     => __( 'Search', 'shopping-feed-custom-fields' ),
-			)
+			]
 		);
 	}
 }

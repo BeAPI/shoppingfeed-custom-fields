@@ -53,7 +53,7 @@ class ShoppingFeedCustomFields {
 
 	/**
 	 * Check if the plugin is compatible
-     * @return bool
+	 * @return bool
 	 */
 	public function check_compatibility() {
 		if ( ! function_exists( 'is_plugin_active' ) ) {
