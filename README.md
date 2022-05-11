@@ -1,4 +1,4 @@
-## ShoppingFeed Custom Fields
+# ShoppingFeed Custom Fields
 Contributors: ShoppingFeed, BeAPI
 Tags: shoppingfeed, marketplace, woocommerce, woocommerce shoppingfeed, create woocommerce products shoppingfeed, products feed, generate shoppingfeed, amazon, Jet, Walmart, many marketplace, import orders, advanced custom fields, acf
 Stable tag: 1.0.2
