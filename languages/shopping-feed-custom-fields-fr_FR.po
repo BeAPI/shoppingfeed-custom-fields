@@ -4,43 +4,28 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/shoppingfeed-"
 "custom-fields\n"
 "POT-Creation-Date: 2022-04-22T20:17:55+00:00\n"
-"PO-Revision-Date: 2022-04-22 22:23+0200\n"
+"PO-Revision-Date: 2022-05-11 13:44+0000\n"
 "Last-Translator: \n"
-"Language-Team: Be API\n"
-"Language: fr_FR\n"
+"Language-Team: Français\n"
+"Language: fr-FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Loco https://localise.biz/\n"
 "X-Poedit-Basepath: ../src\n"
 "X-Poedit-KeywordsList: esc_html_e;esc;__;esc_attr_e;esc_html\n"
 "X-Poedit-SearchPath-0: .\n"
-
-#. Plugin Name of the plugin
-#: src/Admin/Options.php:37 src/Admin/Options.php:38
-msgid "ShoppingFeed Custom Fields"
-msgstr ""
-
-#. Plugin URI of the plugin
-msgid "https://wordpress.org/plugins/shoppingfeed/"
-msgstr ""
-
-#. Description of the plugin
-msgid "Map custom fields for ShoppingFeed plugin"
-msgstr ""
-
-#. Author of the plugin
-msgid "Shopping-Feed"
-msgstr ""
-
-#. Author URI of the plugin
-msgid "https://www.shopping-feed.com/"
-msgstr ""
+"\n"
+"X-Loco-Version: 2.6.1; wp-5.9.3"
 
 #: src/Admin/Options.php:75
 msgid "ACF fields"
 msgstr "Champs ACF"
+
+#: src/Admin/Options.php:108
+msgid "ACF repeater and editor fields are not supported"
+msgstr "Les champs repeater et editor de ACF ne sont pas supportés"
 
 #: src/Admin/Options.php:85
 msgid "Custom fields"
@@ -49,29 +34,57 @@ msgstr "Champ personnalisés"
 #: src/Admin/Options.php:102
 msgid "Custom fields to export to ShoppingFeed. Default : all"
 msgstr ""
-"Champs personnalisés à inclure dans le flux ShoppingFeed. Par défaut : "
-"tous"
+"Champs personnalisés à inclure dans le flux ShoppingFeed. Par défaut : tous"
 
-#: src/Admin/Options.php:118
+#: src/Admin/Options.php:105
+msgid ""
+"Here is the list of the supported ACF fields : text, textarea, number, email,"
+" password, url, select, checkbox, radio, true_false, link"
+msgstr ""
+"Liste de champs ACF supportés : text, textarea, number, email, password, url,"
+" select, checkbox, radio, true_false, link"
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/shoppingfeed/"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.shopping-feed.com/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Map custom fields for ShoppingFeed plugin"
+msgstr ""
+
+#: src/Admin/Options.php:124
 msgid "Save changes"
 msgstr "Enregistrer"
 
-#: src/Admin/Options.php:151
+#: src/Admin/Options.php:159
+msgid "Search"
+msgstr "Rechercher"
+
+#: src/Admin/Options.php:157
 msgid "Selected ACF Fields"
 msgstr "Champs ACF sélectionnés"
 
-#: src/Admin/Options.php:152
-msgid "Unselected ACF Fields"
-msgstr "Champs ACF non sélectionnés"
+#: src/ShoppingFeedCustomFields.php:84
+msgid "Settings"
+msgstr "Réglages"
 
-#: src/Admin/Options.php:153
-msgid "Search"
-msgstr "Rechercher"
+#. Author of the plugin
+msgid "Shopping-Feed"
+msgstr ""
 
 #: src/ShoppingFeedCustomFields.php:38
 msgid "ShoppingFeed and ACF plugins must be activated"
 msgstr "Les plugins ShoppingFeed et ACF doivent être activés"
 
-#: src/ShoppingFeedCustomFields.php:84
-msgid "Settings"
-msgstr "Réglages"
+#. Name of the plugin
+#: src/Admin/Options.php:37 src/Admin/Options.php:38
+msgid "ShoppingFeed Custom Fields"
+msgstr ""
+
+#: src/Admin/Options.php:158
+msgid "Unselected ACF Fields"
+msgstr "Champs ACF non sélectionnés"

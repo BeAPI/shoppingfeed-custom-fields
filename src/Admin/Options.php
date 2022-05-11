@@ -101,6 +101,12 @@ class Options {
 				<p class="description" id="tagline-description">
 					<?php esc_html_e( 'Custom fields to export to ShoppingFeed. Default : all', 'shopping-feed-custom-fields' ); ?>
 				</p>
+				<p class="description" id="tagline-description">
+					<?php esc_html_e( 'Here is the list of the supported ACF fields : text, textarea, number, email, password, url, select, checkbox, radio, true_false, link', 'shopping-feed-custom-fields' ); ?>
+				</p>
+				<p class="description" id="tagline-description">
+					<?php esc_html_e( 'ACF repeater and editor fields are not supported', 'shopping-feed-custom-fields' ); ?>
+				</p>
 				<?php
 			},
 			self::SFCF_SETTINGS_PAGE,
