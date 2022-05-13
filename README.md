@@ -1,8 +1,5 @@
 # ShoppingFeed Custom Fields
 
-## Changelog
-1.0.2 add the readme file
-
 ## Description
 
 Integrate data from ACF fields for the ShoppingFeed plugin in your xml products feed
@@ -12,15 +9,22 @@ Integrate data from ACF fields for the ShoppingFeed plugin in your xml products 
 Requires the shoppingfeed plugin
 
 - Activate the plugin in Plugins > Installed Plugins
-- In Plugins > Installed Plugins > ShoppingFeed Custom Fields > settings,  choose the ACF fields to export
+
+## Changelog
+
+##1.0.2 (12-05-2022)
+
+* added: Readme file
+* added: Notice in the plugin admin page
 
 ## Configuration
 
 To start using the plugin correctly, you need to configure some ACF fields first
+- In Plugins > Installed Plugins > ShoppingFeed Custom Fields > settings,  choose the ACF fields to export
 
-## Extra Fields
+### Supported fields
 
-Please do note that only the following ACF fields will be exported. This implies that repeater, editor and image fields will not!
+Please do note that only the following ACF fields will be exported. Any other field will not!
 
 'text',
 'textarea',
