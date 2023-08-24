@@ -45,7 +45,7 @@ class ShoppingFeedCustomFieldsHelper {
 	public static function acf_is_selected( $key, $options ) {
 		$key = array_search( $key, array_column( $options, 'key' ) );
 
-		return ! ( false === $key );
+		return false !== $key;
 	}
 
 	/**
