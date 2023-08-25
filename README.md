@@ -12,6 +12,10 @@ Requires the shoppingfeed plugin
 
 ## Changelog
 
+##1.0.3 (24-08-2023)
+
+* fix: THe selected/unselected ACF fields are saved correctly
+
 ##1.0.2 (12-05-2022)
 
 * added: Readme file
