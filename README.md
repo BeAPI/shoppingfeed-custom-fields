@@ -12,11 +12,15 @@ Requires the shoppingfeed plugin
 
 ## Changelog
 
-##1.0.3 (24-08-2023)
+### 1.0.4 (28-08-2023)
 
-* fix: THe selected/unselected ACF fields are saved correctly
+* fix: missing value for select with single value
 
-##1.0.2 (12-05-2022)
+### 1.0.3 (24-08-2023)
+
+* fix: The selected/unselected ACF fields are saved correctly
+
+### 1.0.2 (12-05-2022)
 
 * added: Readme file
 * added: Notice in the plugin admin page
@@ -24,7 +28,8 @@ Requires the shoppingfeed plugin
 ## Configuration
 
 To start using the plugin correctly, you need to configure some ACF fields first
-- In Plugins > Installed Plugins > ShoppingFeed Custom Fields > settings,  choose the ACF fields to export
+
+- In Plugins > Installed Plugins > ShoppingFeed Custom Fields > settings, choose the ACF fields to export
 
 ### Supported fields
 
