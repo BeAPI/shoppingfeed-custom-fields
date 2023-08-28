@@ -43,7 +43,7 @@ class Filters {
 				switch ( $acf_field['type'] ) {
 					case 'select':
 					case 'checkbox':
-						$field['value'] = is_array( $field['value'] ) ? implode( ',', $field['value'] ) : '';
+						$field['value'] = is_array( $field['value'] ) ? implode( ',', $field['value'] ) : $field['value'];
 						break;
 					case 'true_false':
 						$field['value'] = (string) $field['value'];
