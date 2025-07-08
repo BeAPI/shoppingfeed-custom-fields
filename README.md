@@ -12,6 +12,10 @@ Requires the shoppingfeed plugin
 
 ## Changelog
 
+### 1.0.5 (8-07-2025)
+
+* fix: set visibility to public for the __wakeup() method in the ShoppingFeedCustomFields class
+
 ### 1.0.4 (28-08-2023)
 
 * fix: missing value for select with single value
