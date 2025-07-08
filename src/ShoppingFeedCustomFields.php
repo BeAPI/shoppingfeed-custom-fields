@@ -97,5 +97,6 @@ class ShoppingFeedCustomFields {
 	 * Singleton instance can't be serialized.
 	 */
 	public function __wakeup() {
+		throw new \Exception( 'Cannot unserialize a singleton.' );
 	}
 }
